@@ -27,7 +27,7 @@ def bind(fn, selfObj, var_args):
     
     def bound():
       # Prepend the bound arguments to the current arguments.
-      var newArgs = Array.prototype.slice.call(arguments);
+      newArgs = Array.prototype.slice.call(arguments);
       Array.prototype.unshift.apply(newArgs, boundArgs);
       return fn.apply(context, newArgs);
     
