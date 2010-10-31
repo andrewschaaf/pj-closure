@@ -99,7 +99,7 @@ def longestCommonSubsequence(array1, array2, opt_compareFn, opt_collectorFn):
   
   for i in range(1, length1 + 1):
     for j in range(1, length1 + 1):
-      if compare(array1[i - 1], array2[j - 1])
+      if compare(array1[i - 1], array2[j - 1]):
         arr[i][j] = arr[i - 1][j - 1] + 1
       else:
         arr[i][j] = Math.max(arr[i - 1][j], arr[i][j - 1])
@@ -109,7 +109,7 @@ def longestCommonSubsequence(array1, array2, opt_compareFn, opt_collectorFn):
   i = length1
   j = length2
   while i > 0 and j > 0:
-    if compare(array1[i - 1], array2[j - 1])
+    if compare(array1[i - 1], array2[j - 1]):
       result.unshift(collect(i - 1, j - 1))
       i -= 1
       j -= 1
