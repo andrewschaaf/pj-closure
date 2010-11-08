@@ -13,14 +13,13 @@
 # limitations under the License.</pre>
 
 
-#TODO explore what this should be in a (function(){...})() world
-goog.global_ = window;
+goog_global = window;
 
 
 
 def bind(fn, selfObj, var_args):
   
-  context = selfObj or goog.global_
+  context = selfObj or goog_global
   
   if len(arguments) > 2:
     boundArgs = Array.prototype.slice.call(arguments, 2)
