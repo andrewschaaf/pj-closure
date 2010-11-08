@@ -56,7 +56,7 @@ def toDegrees(angleRadians):
 
 
 def angleDx(degrees, radius):
-  return radius * Math.cos(goog.math.toRadians(degrees))
+  return radius * Math.cos(toRadians(degrees))
 
 
 def angleDy(degrees, radius):
